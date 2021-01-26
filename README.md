@@ -39,6 +39,9 @@ If no error occurs, output binary will be at `MetaHook\Plugins\CaptionMod\Releas
 4. Launch game from `steamapps\common\Half-Life\metahook.exe -game (your_game_name)`
 
 # Usage Instruction
+### console var: cap_enabled 0 / 1
+
+When set to 0, captions will be disabled.
 
 ### console var: cap_show 0 / 1
 
