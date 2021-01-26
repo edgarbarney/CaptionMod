@@ -41,7 +41,7 @@ If no error occurs, output binary will be at `MetaHook\Plugins\CaptionMod\Releas
 # Usage Instruction
 ### console var: cap_enabled 0 / 1
 
-When set to 0, captions will be disabled.
+When set to 0, captions will be disabled. Otherwise, captions will be enabled.
 
 ### console var: cap_show 0 / 1
 
