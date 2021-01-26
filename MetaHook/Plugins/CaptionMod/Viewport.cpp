@@ -331,9 +331,10 @@ void CDictionary::Load(CSV::CSVDocument::row_type &row, Color &defaultColor, ISc
 
 	Q_strncpy(m_szTitle, title, sizeof(m_szTitle));
 
-	//If title ended with .wav
+	//If title ended with .wav, .ogg or .flac
+	//Modified for MetaAudio
 	int titlelen = strlen(title);
-	if(!Q_stricmp(&title[titlelen-4], ".wav"))
+	if(!Q_stricmp(&title[titlelen-4], ".wav") || !Q_stricmp(&title[titlelen - 4], ".ogg") || !Q_stricmp(&title[titlelen - 4], ".flac"))
 	{
 		m_Type = DICT_SOUND;
 	}
