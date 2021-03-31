@@ -43,6 +43,10 @@ If no error occurs, output binary will be at `MetaHook\Plugins\CaptionMod\Releas
 
 When set to 0, captions will be disabled. Otherwise, captions will be enabled.
 
+### console var: cap_enabled 0 / 1
+
+When set to 0, captions will be disabled. Otherwise, captions will be enabled.
+
 ### console var: cap_show 0 / 1
 
 When set to 1, debug message will be displayed in the console.
@@ -54,10 +58,6 @@ To check current version of this plugin.
 ### console command: cap_reload
 
 Reload the dictionary file
-
-### console command: cap_configs
-
-Open a dialog to modify the configurations
 
 ## Files Usage
 
@@ -87,11 +87,11 @@ Textures of panel's round cornor.
 
 Localization files, for multi-language support.
 
-### gamedir/captionmod/dictionary.csv (.xls .xlsx)
+### gamedir/captionmod/dictionary.csv
 
 Dictionary file, encoded in ANSI or local system encoding.
 
-Support MS Excel XLS files and XLSX files. xlsx has the
+It is not recommended to put any non-ANSI characters in dictionary file.
 
 # You can trigger the subtitle in three ways:
 
@@ -168,37 +168,6 @@ Text alignment for subtitle text and the way how this sentence fade in?
 available value: L / C / R (Case-Insensitive)
 
 available value: alphafade / leftscan (Case-Insensitive)
-
-## Detail about macro.csv(.xls .xlsx)
-
-### Macro Type:
-
-regex: this is a perl regular expression that replace the untranslated Sentence (before transfered by VGUI Localization language files and after the Fill macros is executed) to the Destination Text with Source RegEx.
-
-fill: fill this line with Destination Text, no matter what this source sentence is.
-
-### Macro Name:
-
-Used to identify a macro.
-
-### Source RegEx:
-
-see Macro Type
-
-### Destination Text:
-
-see Macro Type
-
-### How to use a macro? 
-
-add these in cell which is not in a sentence row.
-
-```
-@use MacroName //to enable a macro
-@end MacroName //to disable an active macro
-@end //to disable the last activated macro
-@endall //to disable all active macros.
-```
  
 # changelog:
 

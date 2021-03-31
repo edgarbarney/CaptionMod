@@ -194,6 +194,7 @@ void S_StartDynamicSound(int entnum, int entchannel, sfx_t* sfx, float* origin, 
 	if (m_bSentenceSound)
 	{
 		S_EndSentence();
+		m_flSentenceDuration = 0;
 		m_bSentenceSound = false;
 	}
 }
@@ -221,6 +222,7 @@ void S_StartStaticSound(int entnum, int entchannel, sfx_t* sfx, float* origin, f
 	if (m_bSentenceSound)
 	{
 		S_EndSentence();
+		m_flSentenceDuration = 0;
 		m_bSentenceSound = false;
 	}
 }
